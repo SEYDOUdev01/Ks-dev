@@ -1,2 +1,2 @@
 # Ks-dev
-Mon premier site web personnel, créé avec HTML, CSS et JavaScript.
+KS DEV est mon projet de site web personnel consacré à mon apprentissage et à mes compétences en développement web.
