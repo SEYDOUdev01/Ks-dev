@@ -1,52 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
-    <title>Mon premier site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>nav {
-    background-color: blue;
-    padding: 15px;
-}
+    <title>KS DEV - Développeur Web</title>
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 10px;
-    font-size: 18px;
-}nav {
-    background-color: blue;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+    <style>
 
-.logo {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-}
+        /* ===== STYLE GÉNÉRAL ===== */
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    margin: 8px;
-    font-size: 16px;
-      }
+        * {
+            box-sizing: border-box;
+        }
+
         body {
+            margin: 0;
             text-align: center;
-            font-family: Arial;
+            font-family: Arial, sans-serif;
             background-color: lightblue;
+        }
+
+        /* ===== BARRE DE NAVIGATION ===== */
+
+        nav {
+            background-color: blue;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 8px;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== ACCUEIL ===== */
+
+        #accueil {
+            padding: 60px 20px;
         }
 
         h1 {
             color: blue;
+            animation: apparition 2s ease-in-out;
+        }
+
+        .slogan {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* ===== ANIMATION ===== */
+
+        @keyframes apparition {
+
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        /* ===== SECTIONS ===== */
+
+        section {
+            padding: 30px 20px;
+        }
+
+        h2 {
+            color: blue;
         }
 
         p {
-            font-size: 20px;
+            font-size: 18px;
         }
+
+        /* ===== BOUTONS ===== */
 
         button {
             background-color: blue;
@@ -55,195 +104,319 @@ nav a {
             padding: 10px 20px;
             border: none;
             border-radius: 10px;
-        }button:hover {
-    background-color: darkblue;
-    transform: scale(1.05);
+            cursor: pointer;
+            transition: 0.3s;
         }
+
+        button:hover {
+            background-color: darkblue;
+            transform: scale(1.05);
+        }
+
+        /* ===== FORMULAIRE ===== */
 
         input,
         textarea {
             width: 80%;
+            max-width: 500px;
             padding: 10px;
             margin: 10px;
-        }.cartes {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}.carte {
-    background-color: white;
-    width: 200px;
-    padding: 20px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        /* ===== CARTES DES COMPÉTENCES ===== */
+
+        .cartes {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .carte {
+            background-color: white;
+            width: 250px;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .carte:hover {
+            transform: translateY(-10px);
+        }
+
+        /* ===== PIED DE PAGE ===== */
+
+        footer {
+            background-color: blue;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            font-size: 16px;
+        }
+
+        /* ===== VERSION MOBILE ===== */
+
+        @media (max-width: 600px) {
+
+            nav {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                margin-top: 10px;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+                margin: 5px;
+            }
+
+            .logo {
+                width: 60px;
+                height: 60px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            input,
+            textarea {
+                width: 95%;
+            }
+
+        }
+
+  /* ===== MES PROJETS ===== */
+
+#projets {
+    padding: 40px 20px;
 }
 
-.carte:hover {
-    transform: translateY(-10px);
+.projet {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.carte {
-    background-color: white;
-    width: 200px;
-    padding: 20px;
-    border-radius: 10px;
-      }.logo {
-    width: 150px;
-    height: 150px;
-    object-fit: contain;
-          }@media (max-width: 600px) {
-    nav {
-        flex-direction: column;
-    }
-
-    .nav-links {
-        margin-top: 10px;
-    }
-
-    .nav-links a {
-        font-size: 14px;
-        margin: 5px;
-    }
-}
-  footer {
-    background-color: blue;
-    color: white;
-    padding: 20px;
-    margin-top: 30px;
-  } h1 {
-    color: blue;
-    animation: apparition 2s ease-in-out;
-}
-
-@keyframes apparition {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-  }#accueil {
-    padding: 60px 20px;
-}
-
-.logo-accueil {
-    width: 180px;
-    max-width: 80%;
-}
-
-.slogan {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-.bouton-accueil {
+.bouton-projet {
     display: inline-block;
     background-color: blue;
     color: white;
-    padding: 15px 25px;
+    padding: 10px 15px;
+    border-radius: 8px;
     text-decoration: none;
-    border-radius: 10px;
-    font-size: 18px;
-          } </style>
+    margin-top: 10px;
+}
+
+.bouton-projet:hover {
+    background-color: darkblue;
+          }  </style>
+
 </head>
 
-<body><img src="logo.png" alt="Logo KS DEV" class="logo">
+<body>
 
     <!-- BARRE DE NAVIGATION -->
-    <nav>
-    <img src="logo.png" alt="Logo KS DEV" class="logo">
 
-    <div class="nav-links">
-        <a href="#accueil">Accueil</a>
-        <a href="#apropos">À propos</a>
-        <a href="#competences">Compétences</a>
-        <a href="#contact">Contact</a>
-    </div>
+    <nav>
+
+        <img src="logo.png" alt="Logo KS DEV" class="logo">
+
+        <div class="nav-links">
+            <a href="#accueil">Accueil</a>
+            <a href="#apropos">À propos</a>
+            <a href="#competences">Compétences</a>
+            <a href="#contact">Contact</a>
+        <a href="#projets">Projets</a></div>
+
     </nav>
 
+
     <!-- ACCUEIL -->
+
     <section id="accueil">
-        <h1>Bienvenue sur mon site !</h1>
-        <p>Je suis un futur développeur web.</p>
+
+        <h1>Bienvenue sur KS DEV !</h1>
+
+        <p class="slogan">
+            Je suis un futur développeur web et entrepreneur.
+        </p>
+
     </section>
+
 
     <!-- À PROPOS -->
+
     <section id="apropos">
+
         <h2>À propos de moi</h2>
-        <p>Je suis un futur développeur web et entrepreneur.</p>
+
+        <p>
+            Je suis passionné par le développement web,
+            la technologie et l'entrepreneuriat.
+        </p>
+
+        <p>
+            Mon objectif est de créer des projets numériques
+            modernes et utiles.
+        </p>
+
     </section>
 
+
     <!-- COMPÉTENCES -->
+
     <section id="competences">
+
         <h2>Mes compétences</h2>
+
+        <div class="cartes">
+
+            <div class="carte">
+
+                <h3>HTML</h3>
+
+                <p>
+                    Je l'utilise pour créer la structure
+                    d'un site web.
+                </p>
+
+            </div>
+
+
+            <div class="carte">
+
+                <h3>CSS</h3>
+
+                <p>
+                    Je l'utilise pour améliorer le design
+                    et l'apparence d'un site web.
+                </p>
+
+            </div>
+
+
+            <div class="carte">
+
+                <h3>JavaScript</h3>
+
+                <p>
+                    Je l'utilise pour ajouter des interactions
+                    et des fonctionnalités à un site web.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section><!-- MES PROJETS -->
+
+<section id="projets">
+
+    <h2>Mes projets</h2>
+
+    <p>
+        Découvrez quelques-uns de mes projets et réalisations.
+    </p>
 
     <div class="cartes">
 
-    <div class="carte">
-        <h3>HTML</h3>
-        <p>Je l'utilise pour créer la structure d'un site web.</p>
+        <div class="carte projet">
+            <h3>🌐 Site web</h3>
+            <p>
+                Création de sites web modernes, simples
+                et adaptés aux téléphones.
+            </p>
+            <a href="#contact" class="bouton-projet">
+                En savoir plus
+            </a>
+        </div>
+
+        <div class="carte projet">
+            <h3>🛒 Boutique en ligne</h3>
+            <p>
+                Création de solutions pour présenter
+                et vendre des produits en ligne.
+            </p>
+            <a href="#contact" class="bouton-projet">
+                En savoir plus
+            </a>
+        </div>
+
+        <div class="carte projet">
+            <h3>💡 Projets futurs</h3>
+            <p>
+                De nouvelles idées et applications
+                numériques sont en préparation.
+            </p>
+            <a href="#contact" class="bouton-projet">
+                En savoir plus
+            </a>
+        </div>
+
     </div>
-
-    <div class="carte">
-        <h3>CSS</h3>
-        <p>Je l'utilise pour améliorer le design de mon site.</p>
-    </div>
-
-    <div class="carte">
-        <h3>JavaScript</h3>
-        <p>Je l'utilise pour ajouter des interactions à mon site.</p>
-    </div>
-
-    </div>
-    </section>
-
-    <!-- CONTACT -->
-<section id="contact">
-
-    <h2>Contactez-moi</h2>
-
-    <form action="https://formspree.io/f/xwlkbjjq" method="POST">
-
-        <input
-            type="text"
-            name="nom"
-            placeholder="Entrez votre nom"
-            required
-        >
-
-        <br>
-
-        <textarea
-            name="message"
-            placeholder="Écrivez votre message"
-            rows="5"
-            required
-        ></textarea>
-
-        <br>
-
-        <button type="submit">Envoyer</button>
-
-    </form>
 
 </section>
 
-    <!-- JAVASCRIPT -->
-    <script>
-        function envoyerMessage(event) {
 
-            let nom = document.getElementById("nom").value;
+    <!-- CONTACT -->
 
-            alert("Merci " + nom + " ! Votre message a été reçu.");
-        }
-    </script>
+    <section id="contact">
 
-<footer>
-    <p>© 2026 KS DEV. Tous droits réservés.</p>
-    <p>Créé par un futur développeur web 🚀</p>
-</footer></body>
+        <h2>Contactez-moi</h2>
+
+        <form action="https://formspree.io/f/xwlkbjjq" method="POST">
+
+            <input
+                type="text"
+                name="nom"
+                placeholder="Entrez votre nom"
+                required
+            >
+
+            <br>
+
+            <textarea
+                name="message"
+                placeholder="Écrivez votre message"
+                rows="5"
+                required
+            ></textarea>
+
+            <br>
+
+            <button type="submit">
+                Envoyer
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- PIED DE PAGE -->
+
+    <footer>
+
+        <p>
+            © 2026 KS DEV. Tous droits réservés.
+        </p>
+
+        <p>
+            Créé par un futur développeur web 🚀
+        </p>
+
+    </footer>
+
+</body>
 
 </html>
