@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="description" content="KS DEV - Création de sites web, boutiques en ligne et solutions numériques modernes.">
+    <meta name="keywords" content="KS DEV, développeur web, création site web, Côte d'Ivoire, boutique en ligne">
+    <meta name="author" content="KS DEV">
+    <link rel="icon" type="image/png" href="logo.png">
     <title>KS DEV - Développeur Web</title>
 
     <style>
@@ -166,34 +170,63 @@
 
         /* ===== VERSION MOBILE ===== */
 
-        @media (max-width: 600px) {
+@media (max-width: 600px) {
 
-            nav {
-                flex-direction: column;
-            }
+    nav {
+        padding: 10px;
+    }
 
-            .nav-links {
-                margin-top: 10px;
-            }
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
 
-            .nav-links a {
-                font-size: 14px;
-                margin: 5px;
-            }
+    .nav-links {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-top: 10px;
+    }
 
-            .logo {
-                width: 60px;
-                height: 60px;
-            }
+    .nav-links a {
+        font-size: 14px;
+        margin: 3px;
+        padding: 7px 8px;
+    }
 
-            h1 {
-                font-size: 28px;
-            }
+    #accueil {
+        padding: 45px 15px;
+    }
 
-            input,
-            textarea {
-                width: 95%;
-            }
+    .logo-accueil {
+        width: 150px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .slogan {
+        font-size: 17px;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    .carte {
+        width: 95%;
+        max-width: 350px;
+    }
+}
 
         }
 
@@ -219,9 +252,303 @@
 
 .bouton-projet:hover {
     background-color: darkblue;
-          }  </style>
+          }  /* ===== PRÉSENTATION DES PROJETS ===== */
 
-</head>
+#projets {
+    padding: 60px 20px;
+}
+
+.intro-projets {
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.projets-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.projet-card {
+    background-color: white;
+    width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projet-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.20);
+}
+
+.projet-image {
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    background-color: #e8f1ff;
+}
+
+.projet-contenu {
+    padding: 20px;
+    text-align: left;
+}
+
+.projet-type {
+    color: blue;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.projet-contenu h3 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.projet-contenu p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.technologies {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+.technologies span {
+    background-color: #e8f1ff;
+    color: blue;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 13px;
+}
+
+.bouton-projet {
+    display: inline-block;
+    background-color: blue;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.bouton-projet:hover {
+    background-color: darkblue;
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 600px) {
+
+    .projet-card {
+        width: 95%;
+        max-width: 350px;
+    }
+
+}.contact-intro {
+max-width: 700px;
+margin: 0 auto 30px;
+}
+
+.contact-container {
+display: flex;
+justify-content: center;
+align-items: stretch;
+gap: 30px;
+max-width: 1000px;
+margin: 0 auto;
+flex-wrap: wrap;
+}
+
+.contact-info,
+.contact-form {
+flex: 1;
+min-width: 300px;
+}
+
+.contact-card,
+.contact-form {
+background-color: white;
+padding: 25px;
+border-radius: 15px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+margin-bottom: 20px;
+}
+
+.contact-card h3,
+.contact-form h3 {
+color: blue;
+margin-top: 0;
+}
+
+.contact-button {
+display: inline-block;
+padding: 12px 18px;
+border-radius: 8px;
+color: white;
+text-decoration: none;
+font-weight: bold;
+margin-top: 10px;
+}
+
+.whatsapp {
+background-color: #25D366;
+}
+
+.whatsapp:hover {
+background-color: #128C7E;
+}
+
+.social-links {
+display: flex;
+justify-content: center;
+gap: 10px;
+flex-wrap: wrap;
+margin-top: 15px;
+}
+
+.social-links a {
+background-color: blue;
+color: white;
+text-decoration: none;
+padding: 10px 14px;
+border-radius: 8px;
+}
+
+.social-links a:hover {
+background-color: darkblue;
+}
+
+.contact-form input,
+.contact-form textarea {
+width: 100%;
+margin: 10px 0;
+}
+
+.contact-form button {
+width: 100%;
+}
+
+@media (max-width: 600px) {
+.contact-info,
+.contact-form {
+min-width: 95%;
+}
+
+.contact-card,
+.contact-form {
+    padding: 20px;
+}
+
+  }.whatsapp-flottant {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 55px;
+    height: 55px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 28px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-flottant:hover {
+    transform: scale(1.1);
+  }.bouton-accueil {
+    display: inline-block;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    margin: 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.bouton-accueil:hover {
+    background-color: darkblue;
+    transform: translateY(-3px);
+}
+
+.bouton-secondaire {
+    background-color: white;
+    color: blue;
+    border: 2px solid blue;
+}
+
+.bouton-secondaire:hover {
+    background-color: blue;
+    color: white;
+      }#pourquoi {
+    padding: 60px 20px;
+}
+
+.pourquoi-intro {
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.pourquoi-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.pourquoi-card {
+    background-color: white;
+    width: 240px;
+    padding: 25px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pourquoi-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
+
+.pourquoi-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.pourquoi-card h3 {
+    color: blue;
+    font-size: 20px;
+}
+
+.pourquoi-card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    .pourquoi-card {
+        width: 95%;
+        max-width: 350px;
+    }
+  }</style>
+
+</>
 
 <body>
 
@@ -237,19 +564,26 @@
             <a href="#competences">Compétences</a>
             <a href="#contact">Contact</a>
         <a href="#projets">Projets</a></div>
-
-    </nav>
+ <a href="#services">Services</a>  <a href="#pourquoi">Pourquoi KS DEV ?</a> </nav>
 
 
     <!-- ACCUEIL -->
 
     <section id="accueil">
 
-        <h1>Bienvenue sur KS DEV !</h1>
+    <h1>Bienvenue chez KS DEV 🚀</h1>
 
-        <p class="slogan">
-            Je suis un futur développeur web et entrepreneur.
-        </p>
+<p class="slogan">
+    Je crée des sites web modernes, simples et adaptés à vos besoins.
+</p>
+
+<a href="#projets" class="bouton-accueil">
+    Découvrir mes projets
+</a>
+
+<a href="#contact" class="bouton-accueil bouton-secondaire">
+    Me contacter
+</a>
 
     </section>
 
@@ -319,88 +653,289 @@
         </div>
 
     </section><!-- MES PROJETS -->
+<!-- ===== MES PROJETS ===== -->
 
 <section id="projets">
 
     <h2>Mes projets</h2>
 
-    <p>
-        Découvrez quelques-uns de mes projets et réalisations.
+    <p class="intro-projets">
+        Découvrez mes projets, mes créations et les solutions
+        numériques que je développe avec passion.
     </p>
 
-    <div class="cartes">
+    <div class="projets-container">
 
-        <div class="carte projet">
-            <h3>🌐 Site web</h3>
-            <p>
-                Création de sites web modernes, simples
-                et adaptés aux téléphones.
-            </p>
-            <a href="#contact" class="bouton-projet">
-                En savoir plus
-            </a>
+        <!-- PROJET 1 -->
+        <div class="projet-card">
+
+            <div class="projet-image">
+                🌐
+            </div>
+
+            <div class="projet-contenu">
+
+                <span class="projet-type">
+                    Développement Web
+                </span>
+
+                <h3>Site Web KS DEV</h3>
+
+                <p>
+                    Création d'un site web moderne permettant
+                    de présenter mes compétences, mes projets
+                    et mes services numériques.
+                </p>
+
+                <div class="technologies">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <a href="#" class="bouton-projet">
+                    Voir le projet
+                </a>
+
+            </div>
+
         </div>
 
-        <div class="carte projet">
-            <h3>🛒 Boutique en ligne</h3>
-            <p>
-                Création de solutions pour présenter
-                et vendre des produits en ligne.
-            </p>
-            <a href="#contact" class="bouton-projet">
-                En savoir plus
-            </a>
+
+        <!-- PROJET 2 -->
+        <div class="projet-card">
+
+            <div class="projet-image">
+                🛒
+            </div>
+
+            <div class="projet-contenu">
+
+                <span class="projet-type">
+                    E-commerce
+                </span>
+
+                <h3>Boutique en ligne</h3>
+
+                <p>
+                    Projet de boutique en ligne destiné à présenter
+                    des produits et faciliter leur découverte
+                    par les clients.
+                </p>
+
+                <div class="technologies">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <a href="#" class="bouton-projet">
+                    Voir le projet
+                </a>
+
+            </div>
+
         </div>
 
-        <div class="carte projet">
-            <h3>💡 Projets futurs</h3>
-            <p>
-                De nouvelles idées et applications
-                numériques sont en préparation.
-            </p>
-            <a href="#contact" class="bouton-projet">
-                En savoir plus
-            </a>
+
+        <!-- PROJET 3 -->
+        <div class="projet-card">
+
+            <div class="projet-image">
+                💡
+            </div>
+
+            <div class="projet-contenu">
+
+                <span class="projet-type">
+                    Projet personnel
+                </span>
+
+                <h3>Mon prochain projet</h3>
+
+                <p>
+                    Un nouveau projet numérique est en préparation.
+                    Cette section sera mise à jour dès que le projet
+                    sera disponible.
+                </p>
+
+                <div class="technologies">
+                    <span>Innovation</span>
+                    <span>Web</span>
+                </div>
+
+                <a href="#contact" class="bouton-projet">
+                    Me contacter
+                </a>
+
+            </div>
+
         </div>
 
     </div>
 
 </section>
+<section id="services">
+    <h2>Mes services</h2>
+    <p>Je propose des solutions numériques simples, modernes et adaptées à vos besoins.</p>
 
+    <div class="cartes">
 
+        <div class="carte">
+            <h3>🌐 Création de sites web</h3>
+            <p>Création de sites web modernes, adaptés aux téléphones et aux ordinateurs.</p>
+        </div>
+
+        <div class="carte">
+            <h3>🎨 Design & amélioration</h3>
+            <p>Amélioration de l'apparence, de la navigation et de l'expérience utilisateur.</p>
+        </div>
+
+        <div class="carte">
+            <h3>🛒 Boutique en ligne</h3>
+            <p>Création de pages et de boutiques permettant de présenter vos produits en ligne.</p>
+        </div>
+
+        <div class="carte">
+            <h3>⚙️ Maintenance</h3>
+            <p>Mise à jour et amélioration de sites web existants.</p>
+        </div>
+
+    </div>
+</section>
+<section id="pourquoi">
+    <h2>Pourquoi choisir KS DEV ?</h2><p class="pourquoi-intro">
+    KS DEV vous accompagne dans la création de solutions web modernes,
+    simples et adaptées à vos besoins.
+</p>
+
+<div class="pourquoi-container">
+
+    <div class="pourquoi-card">
+        <div class="pourquoi-icon">🚀</div>
+        <h3>Innovation</h3>
+        <p>
+            Je cherche à créer des solutions modernes et utiles
+            pour répondre aux besoins de chaque projet.
+        </p>
+    </div>
+
+    <div class="pourquoi-card">
+        <div class="pourquoi-icon">📱</div>
+        <h3>Adapté au mobile</h3>
+        <p>
+            Mes sites sont conçus pour être faciles à utiliser
+            sur téléphone, tablette et ordinateur.
+        </p>
+    </div>
+
+    <div class="pourquoi-card">
+        <div class="pourquoi-icon">🎯</div>
+        <h3>À l'écoute</h3>
+        <p>
+            Chaque projet commence par comprendre les besoins
+            et les objectifs du client.
+        </p>
+    </div>
+
+    <div class="pourquoi-card">
+        <div class="pourquoi-icon">💡</div>
+        <h3>Passion du numérique</h3>
+        <p>
+            Je développe continuellement mes compétences pour
+            proposer de meilleures solutions web.
+        </p>
+    </div>
+
+</div>
+
+</section>
     <!-- CONTACT -->
 
-    <section id="contact">
+<section id="contact">
+    <h2>Contactez-moi</h2><p class="contact-intro">
+    Vous avez un projet web, une idée ou une question ?
+    Je serais ravi d’échanger avec vous.
+</p>
 
-        <h2>Contactez-moi</h2>
+<div class="contact-container">
+
+    <div class="contact-info">
+
+        <div class="contact-card">
+            <h3>📱 WhatsApp</h3>
+            <p>Contactez-moi directement sur WhatsApp.</p>
+            <a href="https://wa.me/2250544114329"
+               target="_blank"
+               class="contact-button whatsapp">
+                💬 Me contacter sur WhatsApp
+            </a>
+        </div>
+
+      <div class="contact-card">
+    <h3>📧 Email</h3>
+    <p>Vous pouvez également me contacter directement par email.</p><a href="mailto:kamagateseydou787@gmail.com"
+   class="contact-button">
+    ✉️ Envoyer un email
+</a>
+
+      </div>
+
+        <div class="contact-card">
+            <h3>🌐 Réseaux sociaux</h3>
+            <div class="social-links">
+                <div class="social-links">
+    <a href="https://www.facebook.com/profile.php?id=61550319839579"
+       target="_blank"
+       rel="noopener noreferrer">
+        Facebook
+    </a><a href="https://www.tiktok.com/@ks_boy01?_r=1&_t=ZS-99SOzsXim0O"
+   target="_blank"
+   rel="noopener noreferrer">
+    TikTok
+</a>
+
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+    <div class="contact-form">
+        <h3>Envoyez-moi un message</h3>
 
         <form action="https://formspree.io/f/xwlkbjjq" method="POST">
 
             <input
                 type="text"
                 name="nom"
-                placeholder="Entrez votre nom"
+                placeholder="Votre nom"
                 required
             >
 
-            <br>
+            <input
+                type="email"
+                name="email"
+                placeholder="Votre adresse email"
+                required
+            >
 
             <textarea
                 name="message"
-                placeholder="Écrivez votre message"
-                rows="5"
+                placeholder="Écrivez votre message..."
+                rows="6"
                 required
             ></textarea>
 
-            <br>
-
-            <button type="submit">
-                Envoyer
-            </button>
+            <button type="submit">Envoyer le message 🚀</button>
 
         </form>
+    </div>
 
-    </section>
+</div>
+
+</section>
 
 
     <!-- PIED DE PAGE -->
@@ -417,6 +952,11 @@
 
     </footer>
 
-</body>
+<a href="https://wa.me/2250544114329"
+   target="_blank"
+   class="whatsapp-flottant"
+   aria-label="Contacter KS DEV sur WhatsApp">
+    💬
+</a></body>
 
 </html>
